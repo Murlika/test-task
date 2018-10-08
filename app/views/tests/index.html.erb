@@ -1,0 +1,8 @@
+<h1>Please give up test!</h1>
+
+<p>Select test your like</p>
+      <ul>
+       <% @tests.each do |test| %>
+         <li><%= link_to test.title, test_path(test.id) %> </li>
+       <% end %>
+      </ul>
