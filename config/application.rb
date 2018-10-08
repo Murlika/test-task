@@ -17,6 +17,7 @@ module TestTask
     # the framework and any gems in your application.
     
     config.assets.initialize_on_precompile = false
+    config.assets.compile = true
     config.secret_key = '-- secret key --'
   end
 end
