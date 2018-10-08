@@ -29,7 +29,8 @@ gem 'bootstrap'
 gem 'jquery-rails'
 
 # Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
