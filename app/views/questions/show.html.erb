@@ -1,3 +1,24 @@
-<h1>Go to test yourself!</h1>
-<p>light testing!! All is good!</p>
-<p><%= link_to 'Test it!', tests_path %></p>
+<h1>Questions of a test !</h1>
+<p>Get answer!</p>
+
+<% unless @question.nil?%>
+<%= form_for @question, url: question_answer_path(@passing.test.id), method: "post" do |f| %>
+
+  <%= f.text_field :title %><br>
+  <%= f.text_field :txt %><br>
+  <br>
+  
+  
+  <h2>Get write answer:</h2>
+  <% unless @answers.nil?%>
+   <ul>
+<% @answers.each do |answer| %>
+ 
+   <li><%= check_box_tag 'answers[]', answer.id %> <%= :txt %></li>
+  
+<% end %>
+</ul>
+<% end %>
+  <%= f.submit "Next" %>
+<% end %>
+<% end %>

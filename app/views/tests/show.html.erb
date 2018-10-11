@@ -5,3 +5,6 @@
          <li><%= question.title %> </li>
        <% end %>
       </ul>
+<%= form_for [@test, @question], url: question_ask_path(@test, @question.id), method: "get" do |f| %>
+<%= f.submit "Late" %>
+<% end %>
