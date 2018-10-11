@@ -12,7 +12,7 @@ class PagesController < ApplicationController
   @true_count = passing.user_results.find_all{ |elem| elem == 1 }.size
   @persent_count = percent_of(@true_count, passing.enum_questions.size)
 
-  UserMailer.with(email: 'gajitesib@oranek.com', passing: passing).testpass_email.deliver_now
+  UserMailer.with(email: current_user.email, passing: passing).testpass_email.deliver_now
 
   session.clear
   end

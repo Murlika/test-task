@@ -10,6 +10,14 @@
   </head>
 
   <body data-turbolinks="false">
+	<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+	
+
+	<%=link_to 'Регистрация', new_user_registration_path %>
+	<%=link_to 'Войти', new_user_session_path%>
+	
     <%= yield %>
   </body>
 </html>

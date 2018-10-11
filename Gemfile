@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap'
 gem 'jquery-rails'
 
+#Users
+gem 'devise'
+
 # Use ActiveStorage variant
 gem 'carrierwave'
 gem 'mini_magick'
