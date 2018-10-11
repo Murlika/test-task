@@ -3,8 +3,22 @@ class PagesController < ApplicationController
   end
   
   def finish
-  @passing = TestPassing.find(session[:test_id])
+  if session[:test_id].nil?
+  redirect_to root_path
+  return
+  end
+  
+  passing = TestPassing.find(session[:test_id])
+  @true_count = passing.user_results.find_all{ |elem| elem == 1 }.size
+  @persent_count = percent_of(@true_count, passing.enum_questions.size)
+
   session.clear
+  end
+  
+  private 
+  
+  def percent_of(m, n)
+    m.to_f / n.to_f * 100.0
   end
   
 end

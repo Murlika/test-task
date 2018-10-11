@@ -1,4 +1,5 @@
 <h1>Test is done!</h1>
 <p>All is good!</p>
-<p>You result is <%= @passing.user_results.find_all{ |elem| elem == 1 }.size %></p>
+<p>You result is <%= @true_count %></p>
+<p>Pecent is <%= sprintf("%.2f", @persent_count) %>% </p>
 <p><%= link_to 'Test it again!', root_path %></p>
