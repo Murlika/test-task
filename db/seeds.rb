@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 test = Test.create(title:'Fist test', desc: 'Description', N: 5)
-quest = Question.create(title:'Fist question', txt: 'Description', answer_true_id:1, test_id: test.id)
-quest2 = Question.create(title:'Sec  question', txt: 'Description', answer_true_id:3, test_id: test.id)
-quest3 = Question.create(title:'Fird  question', txt: 'Description', answer_true_id:5, test_id: test.id)
+quest = Question.create(title:'Fist question', txt: 'Description', answer_true_id:[1], test_id: test.id)
+quest2 = Question.create(title:'Sec  question', txt: 'Description', answer_true_id:[3], test_id: test.id)
+quest3 = Question.create(title:'Fird  question', txt: 'Description', answer_true_ids:[5], test_id: test.id)
 Answer.create(txt:'Fst answ', question_id: quest.id)
 Answer.create(txt:'Sec answ', question_id: quest.id)
 Answer.create(txt:'Fst answ2', question_id: quest2.id)
