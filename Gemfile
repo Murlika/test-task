@@ -30,6 +30,7 @@ gem 'jquery-rails'
 
 #Users
 gem 'devise'
+gem 'rails_admin', '~> 1.3'
 
 # Use ActiveStorage variant
 gem 'carrierwave'
