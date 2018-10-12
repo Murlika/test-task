@@ -19,5 +19,9 @@ module TestTask
     config.assets.initialize_on_precompile = false
     config.assets.compile = true
     config.secret_key = '-- secret key --'
+    
+    config.action_mailer.preview_path = "#{Rails.root}/lib/mailer_previews"
+    config.action_mailer.delivery_method = :file
+    config.action_mailer.file_settings = { :location => Rails.root.join('tmp/mail') }
   end
 end
